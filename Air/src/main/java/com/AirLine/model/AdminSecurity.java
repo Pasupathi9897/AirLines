@@ -1,8 +1,6 @@
-package com.dxc.model;
+package com.AirLine.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.springframework.stereotype.Component;
@@ -12,8 +10,6 @@ import org.springframework.stereotype.Component;
 public class AdminSecurity {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	long id;
 	String username;
 	String securityQuestion;
 	String answer;
@@ -21,18 +17,11 @@ public class AdminSecurity {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public AdminSecurity(long id, String username, String securityQuestion, String answer) {
+	public AdminSecurity(String username, String securityQuestion, String answer) {
 		super();
-		this.id = id;
 		this.username=username;
 		this.securityQuestion = securityQuestion;
 		this.answer = answer;
-	}
-	public long getId() {
-		return id;
-	}
-	public void setId(long id) {
-		this.id = id;
 	}
 	
 	public String getUsername() {
@@ -55,7 +44,7 @@ public class AdminSecurity {
 	}
 	@Override
 	public String toString() {
-		return "AdminSecurity [id=" + id + ",username=" + username + ", securityQuestion=" + securityQuestion + ", answer=" + answer + "]";
+		return "AdminSecurity [username=" + username + ", securityQuestion=" + securityQuestion + ", answer=" + answer + "]";
 	}
 	
 	

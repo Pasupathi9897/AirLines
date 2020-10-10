@@ -1,4 +1,4 @@
-package com.dxc.controller;
+package com.AirLine.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

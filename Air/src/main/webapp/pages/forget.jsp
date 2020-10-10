@@ -4,24 +4,18 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Reset Password</title>
 </head>
 <body>
-<form action="loginvalidate" method="post">
+<form action="validate_username" method="post">
 	<table>
 			<tr>
 				<td>User Name</td>
 				<td><input type="text" name="username"></td>
 			</tr>
-			<tr>
-				<td>Password</td>
-				<td><input type="password" name="password">
-				<td>
-			</tr>
 		</table>
-	<input type="submit" value="Login">
+	<input type="submit" value="Next">
 	<input type="reset" value="Cancel">
 	</form>
-	"<a href="register">Register</a>"   "<a href="forget?username">Forget Password</a>" 
 </body>
 </html>

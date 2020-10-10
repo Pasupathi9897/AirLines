@@ -1,4 +1,4 @@
-package com.dxc.model;
+package com.AirLine.model;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -14,11 +14,9 @@ import org.springframework.stereotype.Component;
 @Component
 @Entity
 public class UserInfo {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	long id;
+		
 	String name;
+	@Id
 	String username;
 	String gender;
 	Date dob;
@@ -30,9 +28,8 @@ public class UserInfo {
 		// TODO Auto-generated constructor stub
 	}
 
-	public UserInfo(long id, String name, String username, String gender, String strdob, String mobile, String address) throws ParseException {
+	public UserInfo(String name, String username, String gender, String strdob, String mobile, String address) throws ParseException {
 		super();
-		this.id = id;
 		this.name = name;
 		this.username = username;
 		this.gender = gender;
@@ -40,14 +37,6 @@ public class UserInfo {
 		dob=sdf.parse(strdob);
 		this.mobile = mobile;
 		this.address = address;
-	}
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
 	}
 
 	public String getName() {
@@ -98,7 +87,7 @@ public class UserInfo {
 
 	@Override
 	public String toString() {
-		return "UserInfo [id=" + id + ", name=" + name + ", username=" + username + ", gender=" + gender + ", dob=" + dob + ", mobile=" + mobile
+		return "UserInfo [name=" + name + ", username=" + username + ", gender=" + gender + ", dob=" + dob + ", mobile=" + mobile
 				+ ", address=" + address +"]";
 	}
 	

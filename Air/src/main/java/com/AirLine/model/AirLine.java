@@ -1,4 +1,4 @@
-package com.dxc.model;
+package com.AirLine.model;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
